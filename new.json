@@ -1,0 +1,132 @@
+[
+  {
+    "question_text": "What is the output of the following code?",
+    "code_data": "int main() {\n  double x = 0.1;\n  float y = 0.1f;\n  cout << (x == y) << endl;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Prints 1": "FALSE",
+      "Prints 0": "TRUE",
+      "Generates a compilation error": "FALSE",
+      "None of the above": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "Due to precision differences between 'double' and 'float', comparing x and y results in false, hence it prints 0."
+  },
+  {
+    "question_text": "What is the functionality of the below code?",
+    "code_data": "int main() {\n  int* ptr = new int[5]{1, 2, 3};\n  cout << ptr[2] << endl;\n  delete[] ptr;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Prints the value 3": "TRUE",
+      "Prints the value 0": "FALSE",
+      "Causes a runtime error": "FALSE",
+      "None of the above": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "The code initializes an array of five integers, with the first three explicitly set. The third element (index 2) is 3, which is printed."
+  },
+  {
+    "question_text": "What does the following code demonstrate?",
+    "code_data": "int main() {\n  char c = 255;\n  signed char sc = c;\n  cout << (int)sc << endl;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Demonstrates character overflow": "TRUE",
+      "Prints 255": "FALSE",
+      "Generates a compile-time error": "FALSE",
+      "All of the above": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "Since 'char' is signed by default on many systems, assigning 255 to it results in overflow, displaying -1."
+  },
+  {
+    "question_text": "What is the result of executing the following code?",
+    "code_data": "template<typename T>\nvoid print(T arg) {\n  cout << arg << endl;\n}\nint main() {\n  print(123.456f);\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Prints 123.456": "TRUE",
+      "Prints 123": "FALSE",
+      "Generates a compilation error": "FALSE",
+      "None of the above": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "The template function correctly handles the float, printing '123.456'."
+  },
+  {
+    "question_text": "What does this code illustrate?",
+    "code_data": "int main() {\n  const int x = 10;\n  const int *ptr = &x;\n  cout << *ptr << endl;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Illustrates pointer to a constant": "TRUE",
+      "Changes the value of x": "FALSE",
+      "Generates a runtime error": "FALSE",
+      "None of the above": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "The pointer 'ptr' points to a constant integer 'x', illustrating a pointer to constant usage."
+  },
+  {
+    "question_text": "Identify the issue with the following code:",
+    "code_data": "int main() {\n  long long *ptr = new long long;\n  *ptr = 3000000000;\n  cout << *ptr << endl;\n  delete ptr;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "No issue, works as intended": "TRUE",
+      "Causes a memory leak": "FALSE",
+      "Results in undefined behavior": "FALSE",
+      "Generates a compile-time error": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "The code correctly allocates memory, assigns a value, prints it, and then deallocates the memory."
+  },
+  {
+    "question_text": "What is the functionality of the below code?",
+    "code_data": "enum Color {Red, Green, Blue};\nint main() {\n  Color c = Blue;\n  cout << c << endl;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Prints the name 'Blue'": "FALSE",
+      "Prints the value 2": "TRUE",
+      "Generates a compile-time error": "FALSE",
+      "None of the above": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "Enumerators in an enum are assigned integer values starting from 0 by default. 'Blue' is the third, so it has a value of 2."
+  },
+  {
+    "question_text": "What will the following code output?",
+    "code_data": "int main() {\n  wchar_t w = L'\\u0041';\n  wcout << w << endl;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Prints 'A'": "TRUE",
+      "Prints '41'": "FALSE",
+      "Generates a runtime error": "FALSE",
+      "None of the above": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "The 'wchar_t' type is used for wide characters. '\\u0041' represents 'A', which is printed."
+  },
+  {
+    "question_text": "Analyze the output of the below code:",
+    "code_data": "int main() {\n  int arr[3] = {0};\n  int *ptr = arr + 2;\n  *ptr = 10;\n  cout << arr[2] << endl;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Prints 0": "FALSE",
+      "Prints 10": "TRUE",
+      "Causes a segmentation fault": "FALSE",
+      "Generates a compile-time error": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "Pointer arithmetic is used to access the third element of the array, which is then set to 10 and printed."
+  },
+  {
+    "question_text": "What is the result of the following code execution?",
+    "code_data": "int main() {\n  int i = INT_MAX;\n  cout << ++i << endl;\n  return 0;\n}",
+    "answer_count": 4,
+    "options": {
+      "Prints the maximum int value": "FALSE",
+      "Prints a negative number": "TRUE",
+      "Generates a runtime error": "FALSE",
+      "Generates a compile-time error": "FALSE"
+    },
+    "difficulty_level": "2",
+    "answer_explanation_content": "Incrementing INT_MAX leads to integer overflow, resulting in a negative number due to wrapping around."
+  }
+]
